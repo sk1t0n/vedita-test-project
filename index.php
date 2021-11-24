@@ -1,7 +1,4 @@
-<?php require 'products.php';
-
-exit();
-?>
+<?php require 'products.php'; ?>
 
 <!DOCTYPE html>
 <html lang="ru">
