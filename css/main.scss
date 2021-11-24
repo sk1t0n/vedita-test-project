@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2em;
+}
+
+@mixin elem_hover {
+  background-color: #777;
+  border-color: #666;
+  color: #fff;
+}
+
+@mixin elem_disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #eee;
+}
+
+.products {
+  width: 1000px;
+  padding: 30px;
+  text-align: center;
+  border-collapse: collapse;
+
+  & tr:not(:first-child):hover {
+    background: #ccc;
+  }
+
+  & td {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.button {
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #ccc;
+
+  &:hover {
+    @include elem_hover();
+  }
+}
+
+.small-button {
+  cursor: pointer;
+  border: 1px solid #ccc;
+
+  &.small-button_disabled {
+    @include elem_disabled();
+  }
+}
+
+.pagination {
+  padding: 0px 30px;
+
+  & ul {
+    list-style-type: none;
+    display: flex;
+
+    & .link_disabled {
+      @include elem_disabled();
+    }
+
+    & .link {
+      text-decoration: none;
+      display: block;
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+      text-align: center;
+      margin: 0 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+
+      &:link,
+      &:active,
+      &:visited {
+        color: #000;
+      }
+
+      &:hover {
+        @include elem_hover();
+      }
+    }
+  }
+}
+
+.alert {
+  margin: 100px auto 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 60px;
+  border: 1px solid #ccc;
+}

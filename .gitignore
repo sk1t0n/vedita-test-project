@@ -1,0 +1,6 @@
+# Composer
+vendor/
+
+# PHP CS Fixer
+tools/
+.php-cs-fixer.cache

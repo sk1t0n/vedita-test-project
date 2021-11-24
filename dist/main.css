@@ -1,0 +1,102 @@
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/main.scss ***!
+  \************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap);
+/*!****************************************************************************************************************!*\
+    !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/main.scss (1) ***!
+    \****************************************************************************************************************/
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.products {
+  width: 1000px;
+  padding: 30px;
+  text-align: center;
+  border-collapse: collapse;
+}
+.products tr:not(:first-child):hover {
+  background: #ccc;
+}
+.products td {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.button {
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.button:hover {
+  background-color: #777;
+  border-color: #666;
+  color: #fff;
+}
+
+.small-button {
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.small-button.small-button_disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #eee;
+}
+
+.pagination {
+  padding: 0px 30px;
+}
+.pagination ul {
+  list-style-type: none;
+  display: flex;
+}
+.pagination ul .link_disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #eee;
+}
+.pagination ul .link {
+  text-decoration: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.pagination ul .link:link,
+.pagination ul .link:active,
+.pagination ul .link:visited {
+  color: #000;
+}
+.pagination ul .link:hover {
+  background-color: #777;
+  border-color: #666;
+  color: #fff;
+}
+
+.alert {
+  margin: 100px auto 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 60px;
+  border: 1px solid #ccc;
+}
