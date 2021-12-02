@@ -1,8 +1,8 @@
 <?php
 
-require './products.php';
+require_once __DIR__ . '/src/database/Products.php';
 
-if ('POST' === $_SERVER['REQUEST_METHOD'] && isset($_POST['id'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
     $id = filter_var($_POST['id'], FILTER_VALIDATE_INT);
     $db->hideProduct($id);
 

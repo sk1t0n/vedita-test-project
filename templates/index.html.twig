@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Товары{% endblock %}
+
+{% block main %}
+    <main class="container">
+        <h1>Товары</h1>
+
+        {% if products|length == 0 %}
+            <div class="alert">Товары не найдены</div>';
+        {% else %}
+            <table class="products">
+                <tr>
+                    <th>№</th>
+                    <th>ID товара</th>
+                    <th>Название товара</th>
+                    <th>Цена товара</th>
+                    <th>Артикул товара</th>
+                    <th>
+                        <span>Количество товара</span>
+                        <button
+                            class="small-button {{ disabledPlus }}"
+                            onclick="handlerButtonPlus({{ page }}, {{ limit}})"
+                        >+</button>
+                        <button
+                            class="small-button {{ disabledMinus }}"
+                            onclick="handlerButtonMinus({{ page }}, {{ limit }})"
+                        >-</button>
+                    </th>
+                    <th>Дата изготовления</th>
+                    <th></th>
+                </tr>
+                {% for product in products %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ product[1] }}</td>
+                        <td>{{ product[2] }}</td>
+                        <td>{{ product[3] }}</td>
+                        <td>{{ product[4] }}</td>
+                        <td>{{ product[5] }}</td>
+                        <td>{{ product[6] }}</td>
+                        <td>
+                            <button
+                                class="button"
+                                onclick="handlerHideProduct({{ product[0] }})"
+                            >Скрыть</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+            {% if pageCount > 1 %}
+                {% include 'includes/pagination.html.twig' %}
+            {% endif %}
+        {% endif %}
+    </main>
+{% endblock %}

@@ -1,0 +1,12 @@
+<nav class="pagination">
+    <ul>
+        {% for i in range(1, pageCount) %}
+            <li>
+                <a
+                    class="link {{ page == i ? 'link_disabled' : '' }}"
+                    href="?page={{ i }}&limit={{ limit }}"
+                >{{ i }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

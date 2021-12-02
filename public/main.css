@@ -59,6 +59,7 @@ h1 {
 
 .pagination {
   padding: 0px 30px;
+  margin-bottom: 30px;
 }
 .pagination ul {
   list-style-type: none;
